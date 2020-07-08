@@ -1,4 +1,4 @@
-package sinduri;
+package sinduri.ArrayLists;
 
 public class City {
     String cityName;
