@@ -23,21 +23,30 @@ public class AustrianCities {
         Collections.sort(cityPopulationList, CityPopulation.CityNameComparator1);
 
         for(int i = 0; i < this.cityPopulationList.size(); i++) {
-            System.out.printf("%-32s %n", this.cityPopulationList.get(i).getCityName());
+            System.out.printf("%-32s %-16s %n", this.cityPopulationList.get(i).getCityName(), this.cityPopulationList.get(i).getCityCitizensPopulation());
         }
 
         System.out.println("\nThe cities names in descending order are:");
         Collections.sort(cityPopulationList, CityPopulation.CityNameComparator2);
 
         for(int i = 0; i < this.cityPopulationList.size(); i++) {
-            System.out.printf("%-32s %n", this.cityPopulationList.get(i).getCityName());
+            System.out.printf("%-32s %-16s %n", this.cityPopulationList.get(i).getCityName(), this.cityPopulationList.get(i).getCityCitizensPopulation());
         }
     }
 
     public void printCityPopulation() {
-        System.out.println("The cities population are:");
+        System.out.println("\nThe cities by population in ascending order are:");
+        Collections.sort(cityPopulationList, CityPopulation.CityPopulationComparator1);
+
         for(int i = 0; i < this.cityPopulationList.size(); i++) {
-            System.out.printf("%-32s %n", this.cityPopulationList.get(i).getCityCitizensPopulation());
+            System.out.printf("%-32s %-16s %n", this.cityPopulationList.get(i).getCityName(), this.cityPopulationList.get(i).getCityCitizensPopulation());
+        }
+
+        System.out.println("\nThe cities by population in descending order are:");
+        Collections.sort(cityPopulationList, CityPopulation.CityPopulationComparator2);
+
+        for(int i = 0; i < this.cityPopulationList.size(); i++) {
+            System.out.printf("%-32s %-16s %n", this.cityPopulationList.get(i).getCityName(), this.cityPopulationList.get(i).getCityCitizensPopulation());
         }
     }
 

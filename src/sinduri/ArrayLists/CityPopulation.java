@@ -40,15 +40,15 @@ public class CityPopulation {
         }
     };
 
-/*    public static Comparator<CityPopulation> CityPopulationComparator1 = new Comparator<CityPopulation>() {
+    public static Comparator<CityPopulation> CityPopulationComparator1 = new Comparator<CityPopulation>() {
         public int compare (CityPopulation c1, CityPopulation c2) {
-            return (c1.getCityCitizensPopulation()).compareTo(c2.getCityCitizensPopulation());
+            return (Integer.valueOf(c1.getCityCitizensPopulation())).compareTo(Integer.valueOf(c2.getCityCitizensPopulation()));
         }
     };
 
     public static Comparator<CityPopulation> CityPopulationComparator2 = new Comparator<CityPopulation>() {
         public int compare (CityPopulation c1, CityPopulation c2) {
-            return (c2.getCityCitizensPopulation()).compareTo(c1.getCityCitizensPopulation());
+            return (Integer.valueOf(c2.getCityCitizensPopulation())).compareTo(Integer.valueOf(c1.getCityCitizensPopulation()));
         }
-    };*/
+    };
 }
