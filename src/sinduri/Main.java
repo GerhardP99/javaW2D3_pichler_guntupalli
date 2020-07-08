@@ -142,7 +142,30 @@ public class Main {
             System.out.println(cityList.get(i) + " is a city of Austria.");
         }
 
+        //A4
+        System.out.println("\nA4");
 
+        ArrayList<CityPopulation> cityPopulationList= new ArrayList<CityPopulation>();
+
+        cityPopulationList.add(new CityPopulation("Vienna", 1911728));
+        cityPopulationList.add(new CityPopulation("Sankt Polten", 1684623));
+        cityPopulationList.add(new CityPopulation("Linz", 1490392));
+        cityPopulationList.add(new CityPopulation("Graz", 1246576));
+        cityPopulationList.add(new CityPopulation("Innsbruck", 757852));
+        cityPopulationList.add(new CityPopulation("Klagenfurt", 561390));
+        cityPopulationList.add(new CityPopulation("Salzburg", 558479));
+        cityPopulationList.add(new CityPopulation("Bregenz", 397094));
+        cityPopulationList.add(new CityPopulation("Eisenstadt", 294466));
+
+        for(int i = 0; i < cityPopulationList.size(); i++) {
+            System.out.printf("%-32s %-16s %n", cityPopulationList.get(i).getCityName(), cityPopulationList.get(i).getCityCitizensPopulation());
+        }
+
+        System.out.println("\nUsing AustrianCities Class\n");
+
+        AustrianCities citiesPopulation = new AustrianCities(cityPopulationList);
+
+        citiesPopulation.printAllCityData();
 
 
 
