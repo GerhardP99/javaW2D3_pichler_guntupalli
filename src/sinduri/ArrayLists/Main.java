@@ -167,6 +167,9 @@ public class Main {
 
         citiesPopulation.printAllCityData();
 
+        System.out.println("Sorting Cities");
+        citiesPopulation.printCityNames();
+
 
 
 

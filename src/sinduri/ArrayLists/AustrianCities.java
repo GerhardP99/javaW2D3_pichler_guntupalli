@@ -1,6 +1,7 @@
 package sinduri.ArrayLists;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AustrianCities {
     ArrayList<CityPopulation> cityPopulationList;
@@ -9,8 +10,25 @@ public class AustrianCities {
         this.cityPopulationList = cityPopulationList;
     }
 
+    public ArrayList<CityPopulation> getCityPopulationList() {
+        return cityPopulationList;
+    }
+
+    public void setCityPopulationList(ArrayList<CityPopulation> cityPopulationList) {
+        this.cityPopulationList = cityPopulationList;
+    }
+
     public void printCityNames() {
-        System.out.println("The cities names are:");
+        System.out.println("\nThe cities names in ascending order are:");
+        Collections.sort(cityPopulationList, CityPopulation.CityNameComparator1);
+
+        for(int i = 0; i < this.cityPopulationList.size(); i++) {
+            System.out.printf("%-32s %n", this.cityPopulationList.get(i).getCityName());
+        }
+
+        System.out.println("\nThe cities names in descending order are:");
+        Collections.sort(cityPopulationList, CityPopulation.CityNameComparator2);
+
         for(int i = 0; i < this.cityPopulationList.size(); i++) {
             System.out.printf("%-32s %n", this.cityPopulationList.get(i).getCityName());
         }
