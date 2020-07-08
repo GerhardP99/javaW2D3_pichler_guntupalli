@@ -20,14 +20,14 @@ public class AustrianCities {
 
     public void printCityNames() {
         System.out.println("\nThe cities names in ascending order are:");
-        Collections.sort(cityPopulationList, CityPopulation.CityNameComparator1);
+        Collections.sort(cityPopulationList, DataCompare.CityNameComparator1);
 
         for(int i = 0; i < this.cityPopulationList.size(); i++) {
             System.out.printf("%-32s %-16s %n", this.cityPopulationList.get(i).getCityName(), this.cityPopulationList.get(i).getCityCitizensPopulation());
         }
 
         System.out.println("\nThe cities names in descending order are:");
-        Collections.sort(cityPopulationList, CityPopulation.CityNameComparator2);
+        Collections.sort(cityPopulationList, DataCompare.CityNameComparator2);
 
         for(int i = 0; i < this.cityPopulationList.size(); i++) {
             System.out.printf("%-32s %-16s %n", this.cityPopulationList.get(i).getCityName(), this.cityPopulationList.get(i).getCityCitizensPopulation());
@@ -36,14 +36,14 @@ public class AustrianCities {
 
     public void printCityPopulation() {
         System.out.println("\nThe cities by population in ascending order are:");
-        Collections.sort(cityPopulationList, CityPopulation.CityPopulationComparator1);
+        Collections.sort(cityPopulationList, DataCompare.CityPopulationComparator1);
 
         for(int i = 0; i < this.cityPopulationList.size(); i++) {
             System.out.printf("%-32s %-16s %n", this.cityPopulationList.get(i).getCityName(), this.cityPopulationList.get(i).getCityCitizensPopulation());
         }
 
         System.out.println("\nThe cities by population in descending order are:");
-        Collections.sort(cityPopulationList, CityPopulation.CityPopulationComparator2);
+        Collections.sort(cityPopulationList, DataCompare.CityPopulationComparator2);
 
         for(int i = 0; i < this.cityPopulationList.size(); i++) {
             System.out.printf("%-32s %-16s %n", this.cityPopulationList.get(i).getCityName(), this.cityPopulationList.get(i).getCityCitizensPopulation());
