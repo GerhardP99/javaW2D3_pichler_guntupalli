@@ -1,7 +1,6 @@
 package sinduri;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -33,7 +32,7 @@ public class Main {
         temperatureList.add(17);
         temperatureList.add(18);
 
-        //Using a for loop to print out the results
+        //Using a for-Each loop to print out the results
         for (int temperature: temperatureList) {
             System.out.println(temperature + "\u00B0C is the temperature somewhere in Austria.");
         }
@@ -50,6 +49,98 @@ public class Main {
 
         //A2
         System.out.println("\nA2");
+
+        Collections.sort(cityList);
+
+        for (int i = 0; i < cityList.size(); i++) {
+            System.out.println(cityList.get(i) + " is a city of Austria.");
+        }
+
+        String[] villageArray = {"Hallstatt", "St. Gilgen", "St. Christoph am Arlberg"};
+
+        cityList.addAll(Arrays.asList(villageArray));
+
+        System.out.println("\nAfter adding villages:");
+
+        for (int i = 0; i < cityList.size(); i++) {
+            System.out.println(cityList.get(i) + " is a city/village of Austria.");
+        }
+
+        Scanner inputValue = new Scanner(System.in);
+
+        System.out.print("\nEnter a city to find: ");
+        String cityName = inputValue.nextLine();
+
+        //Trying out contains() method in Collections
+        String containsResult = (cityList.contains(cityName)) ?
+                cityName + " is one of the cities in the list!" :
+                cityName + " is not one of the cities in the list!";
+
+        System.out.println(containsResult);
+
+        //removeIf Method
+
+        System.out.println("\nOriginal Temperature List:");
+
+        for (int temperature: temperatureList) {
+            System.out.println(temperature + "\u00B0C is the temperature somewhere in Austria.");
+        }
+
+        System.out.println("\nNew Temperature List:");
+
+        temperatureList.removeIf(aElement -> (aElement % 2 == 0));
+
+        for (int temperature: temperatureList) {
+            System.out.println(temperature + "\u00B0C is the temperature somewhere in Austria.");
+        }
+
+        System.out.println("\nOriginal City List:");
+        for (int i = 0; i < cityList.size(); i++) {
+            System.out.println(cityList.get(i) + " is a city of Austria.");
+        }
+
+        cityList.removeIf(aElement -> (aElement.charAt(1) == 'i'));
+
+        System.out.println("\nNew City List:");
+        for (int i = 0; i < cityList.size(); i++) {
+            System.out.println(cityList.get(i) + " is a city of Austria.");
+        }
+
+        //Adding Vienna to the front of the list
+
+        cityList.add(0, "Vienna");
+        System.out.println("\nUpdated City List:");
+        for (int i = 0; i < cityList.size(); i++) {
+            System.out.println(cityList.get(i) + " is a city of Austria.");
+        }
+
+        //A3
+        System.out.println("\nA3");
+
+        cityList.set(6, "Linz");
+        System.out.println("\nUpdated City List by replacing St.Gilgen with Linz:");
+        for (int i = 0; i < cityList.size(); i++) {
+            System.out.println(cityList.get(i) + " is a city of Austria.");
+        }
+
+        cityList.remove(2);
+        System.out.println("\nUpdated City List after removing 3rd element:");
+        for (int i = 0; i < cityList.size(); i++) {
+            System.out.println(cityList.get(i) + " is a city of Austria.");
+        }
+
+        //Sort and Reverse
+        Collections.sort(cityList);
+        System.out.println("\nSorted City List:");
+        for (int i = 0; i < cityList.size(); i++) {
+            System.out.println(cityList.get(i) + " is a city of Austria.");
+        }
+
+        Collections.reverse(cityList);
+        System.out.println("\nSorted City List in Reverse Order:");
+        for (int i = 0; i < cityList.size(); i++) {
+            System.out.println(cityList.get(i) + " is a city of Austria.");
+        }
 
 
 
